@@ -2,14 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     public Rigidbody2D body;
-
-    float hori;
-    float verti;
-    float moveLimiter = 0.7f;
-
     public float runSpeed = 10.0f;
     public Vector2 move;
     public float hf = 0.0f;
@@ -25,8 +20,6 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hori = Input.GetAxisRaw("Horizontal");
-        verti = Input.GetAxisRaw("Vertical");
         move = move.normalized;
     }
 
@@ -52,8 +45,4 @@ public class movement : MonoBehaviour
 
     }
 
-    private void PlayAnim()
-    {
-       
-    }
 }

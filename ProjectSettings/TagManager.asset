@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ICollectible
   layers:
   - Default
   - TransparentFX
@@ -11,8 +12,6 @@ TagManager:
   - 
   - Water
   - UI
-  - ground
-  - objects
   - 
   - 
   - 
@@ -27,7 +26,9 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -42,11 +43,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: ground
-    uniqueID: 2094876499
+    uniqueID: 2425651459
     locked: 0
   - name: objects
-    uniqueID: 3430000477
+    uniqueID: 4250941897
     locked: 0
-  - name: player
-    uniqueID: 4009157861
+  - name: Player
+    uniqueID: 4189426099
     locked: 0
