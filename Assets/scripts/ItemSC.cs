@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { HEAL, KEY, DMG }
+public enum ItemType { HEAL, KEY, DMG, ITEM }
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item", order = 1)]
-public class ItemSC : MonoBehaviour
+public class ItemSC : ScriptableObject
 {
     new public string name = "New Item";
     public Sprite icon;
