@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf6502179286904791178a4ac2ca379, type: 3}
-  m_Name: Skull
+  m_Name: Donut
   m_EditorClassIdentifier: 
-  name: Skull
-  icon: {fileID: 21300000, guid: 587503b6015abc741ad5147fff8f4a06, type: 3}
+  name: Donut
+  icon: {fileID: 21300000, guid: e9553cc7c925c684e8a82bc520f62c13, type: 3}
   type: 0
-  itemType: 3
-  actionType: 1
+  actionType: 3
   stackable: 1
