@@ -42782,6 +42782,7 @@ GameObject:
   - component: {fileID: 1761460541}
   - component: {fileID: 1761460546}
   - component: {fileID: 1761460547}
+  - component: {fileID: 1761460548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -42951,6 +42952,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f547a52e4613f6e43bcaf47a877dae83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1761460548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761460540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9c92973c39134469325f0c50bd99cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  mana:
+    baseValue: 0
+  strength:
+    baseValue: 0
+  intellect:
+    baseValue: 0
+  dexterity:
+    baseValue: 0
+  endurance:
+    baseValue: 0
+  herbalism:
+    baseValue: 0
+  treeCutting:
+    baseValue: 0
+  armor:
+    baseValue: 10
 --- !u!1001 &1795866790
 PrefabInstance:
   m_ObjectHideFlags: 0
