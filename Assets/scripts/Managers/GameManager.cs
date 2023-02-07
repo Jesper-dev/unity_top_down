@@ -6,10 +6,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     public int health;
-    public int currentHealth { get; private set; }
+    public int currentHealth { get; set; }
     public Stat mana;
-
-    [SerializeField]
     public Stat strength;
     public Stat intellect;
     public Stat dexterity;
@@ -17,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Stat herbalism;
     public Stat treeCutting;
     public Stat armor;
+
+    public int statPoints;
 
     private void Awake()
     {
@@ -27,7 +27,20 @@ public class GameManager : MonoBehaviour
         } else
         {
             _instance = this;
+            currentHealth = health;
             DontDestroyOnLoad(this.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T) && GameManager.Instance.currentHealth > 0)
+        {
+            TakeDamage(20);
+        }
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            HealFullHp();
         }
     }
 
@@ -42,5 +55,17 @@ public class GameManager : MonoBehaviour
 
             return _instance;
         }
+    }
+    public void HealFullHp()
+    {
+        GameManager.Instance.currentHealth = GameManager.Instance.health;
+    }
+
+    public void TakeDamage(int dmg)
+    {
+        dmg -= GameManager.Instance.armor.GetValue();
+        // Gör så att dmg aldrig blir mindre än 0
+        dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
+        GameManager.Instance.currentHealth -= dmg;
     }
 }
